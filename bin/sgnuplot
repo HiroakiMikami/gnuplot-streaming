@@ -1,0 +1,38 @@
+#! /usr/bin/env node
+
+// Require modules
+const commander = require('commander');
+const sgnuplot = require('../lib/main.js');
+
+var file = null;
+
+commander
+  .version('0.0.0')
+  .option('-n --number <num>', 'Number of data shown in plot (default -1)', parseInt)
+  .option('--gnuplot-args <args>', 'Arguments passed to gnuplot')
+  .option('--plot-options <options>', 'Options used in plot command')
+  .option('--splot', 'Use splot instead of plot')
+  .option('--initialize-script <script>', 'Gnuplot commands executed before plot')
+  .option('--finalize-script <script>', 'Gnuplot commands executed after plot')
+  .arguments("<file>")
+  .action((file_) => {
+    file = file_;
+  })
+  .parse(process.argv);
+
+const options = {
+  dataNum: commander.number,
+  gnuplotOptions: commander['gnuplot-args'],
+  usesSplot: (commander.splot) ? true : false,
+  initializeScript: commander['initialize-script'],
+  finalizeScript: commander['finalize-script']
+};
+
+
+if (file === null || file === "-") {
+  // Use stdin
+  sgnuplot.plotStdin(options)
+} else {
+  // Use file
+  sgnuplot.plotFile(file, options)
+}
