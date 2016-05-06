@@ -1,0 +1,24 @@
+{
+  "name": "gnuplot-streaming",
+  "version": "0.0.0",
+  "description": "Visualize stream data by using gnuplot",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo 'No test cases are specified.'"
+  },
+  "keywords": [
+    "gnuplot",
+    "cli"
+  ],
+  "author": "Hiroaki Mikami",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "*",
+    "comandante": "*",
+    "readline": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
+}
