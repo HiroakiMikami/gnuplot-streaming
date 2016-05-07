@@ -15,7 +15,8 @@
   "dependencies": {
     "commander": "*",
     "comandante": "*",
-    "readline": "*"
+    "readline": "*",
+    "bluebird": ">=3.3.1 < 4.0.0"
   },
   "devDependencies": {
     "mocha": "*",
