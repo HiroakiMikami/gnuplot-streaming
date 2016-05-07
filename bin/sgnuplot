@@ -29,10 +29,12 @@ const options = {
 };
 
 
-if (file === null || file === "-") {
-  // Use stdin
-  sgnuplot.plotStdin(options)
-} else {
-  // Use file
-  sgnuplot.plotFile(file, options)
-}
+const closable =
+  (file === null || file === "-")
+    ? sgnuplot.plotStdin(options) // Use stdin
+    : sgnuplot.plotFile(file, options) // Use file
+
+process.on('SIGINT', () => {
+  // Close sgnuplot
+  closable.close();
+})
