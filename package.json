@@ -1,6 +1,6 @@
 {
   "name": "gnuplot-streaming",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Visualize stream data by using gnuplot",
   "main": "lib/main.js",
   "scripts": {
