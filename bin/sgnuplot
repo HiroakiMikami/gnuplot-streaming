@@ -22,12 +22,12 @@ commander
 
 const options = {
   dataNum: commander.number,
-  gnuplotOptions: commander['gnuplot-args'],
+  gnuplotOptions: commander['gnuplotArgs'],
   usesSplot: (commander.splot) ? true : false,
-  initializeScript: commander['initialize-script'],
-  finalizeScript: commander['finalize-script']
+  plotOptions: commander['plotOptions'],
+  initializeScript: commander['initializeScript'],
+  finalizeScript: commander['finalizeScript']
 };
-
 
 const closable =
   (file === null || file === "-")
