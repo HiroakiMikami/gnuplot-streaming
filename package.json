@@ -6,10 +6,20 @@
   "scripts": {
     "test": "echo 'No test cases are specified.'"
   },
+  "bin": {
+    "sgnuplot": "bin/sgnuplot"
+  },
   "keywords": [
     "gnuplot",
     "cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiroakiMikami/gnuplot-streaming.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HiroakiMikami/gnuplot-streaming/issues"
+  },
   "author": "Hiroaki Mikami",
   "license": "MIT",
   "dependencies": {
