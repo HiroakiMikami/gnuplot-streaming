@@ -7,7 +7,7 @@ const sgnuplot = require('../lib/main.js');
 var file = null;
 
 commander
-  .version('0.0.0')
+  .version('0.1.1')
   .option('-n --number <num>', 'Number of data shown in plot (default -1)', parseInt)
   .option('--gnuplot-args <args>', 'Arguments passed to gnuplot')
   .option('--plot-options <options>', 'Options used in plot command')
